@@ -1,14 +1,25 @@
+:root {
+  --gray-50: #ffffff;
+  --gray-200: #bdbdbd;
+  --purple-900: #1f0d22;
+  --purple-600: #641e6f;
+  --yellow-50: #fecd23;
+  --blue-50: #3e5fef;
+  --blue-500: #1d3083;
+  --shadow: 0 10px 10px 1px #0008;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--gray-50);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   text-align: center;
-  background: linear-gradient(#1f0d22, #641e6f);
+  background: linear-gradient(var(--purple-900), var(--purple-600));
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -25,7 +36,7 @@ header {
 }
 
 h1 {
-  color: #fecd23;
+  color: var(--yellow);
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 20px;
@@ -37,9 +48,9 @@ p {
 }
 
 main {
-  background: linear-gradient(to top, #1f0d22, #641e6f);
+  background: linear-gradient(to top, var(--purple-900), var(--purple-600));
   border-radius: 10px;
-  box-shadow: 0 10px 10px 1px #0008;
+  box-shadow: var(--shadow);
   padding: 20px;
   margin: 40px 0;
 }
@@ -58,7 +69,7 @@ main form {
 
 main form input {
   height: 50px;
-  background-color: #1f0d22;
+  background-color: var(--purple-900);
   padding: 0 20px;
   font-size: 16px;
   border-radius: 10px;
@@ -66,7 +77,7 @@ main form input {
 }
 
 main form input::placeholder {
-  color: #bdbdbd;
+  color: var(--gray-200);
 }
 
 .cards {
@@ -79,10 +90,10 @@ main form input::placeholder {
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
-  background-color: #3e5fef;
-  border: 4px solid #1d3083;
+  background-color: var(--blue-50);
+  border: 4px solid var(--blue-500);
   border-radius: 10px;
-  box-shadow: 0 10px 10px 1px #0008;
+  box-shadow: var(--shadow);
 }
 
 .cards .card span {
@@ -91,7 +102,7 @@ main form input::placeholder {
 }
 
 .cards .card button {
-  background-color: #1f0d22;
+  background-color: var(--purple-900);
   border: transparent;
   height: 50px;
   border-radius: 10px;
