@@ -82,6 +82,8 @@ main form input::placeholder {
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -117,4 +119,21 @@ footer {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.25rem;
+}
+
+/* html {
+  x: 93,75%; -> 15px
+  x: 87,5% -> 14px
+} */
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 93.75%; /* 15px */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
 }
