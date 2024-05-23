@@ -1,12 +1,14 @@
 :root {
   --gray-50: #ffffff;
   --gray-200: #bdbdbd;
-  --purple-900: #1f0d22;
+  --purple-900: #110713;
+  --purple-800: #1f0d22;
   --purple-600: #641e6f;
   --yellow-50: #fecd23;
   --blue-50: #3e5fef;
   --blue-500: #1d3083;
-  --shadow: 0 0.625rem 0.625rem 0.0625rem #0008;
+  --shadow: 0 0.625rem 0.625rem #0008;
+  --shadow-hover: 0 0.625rem 1.25rem #000;
 }
 
 * {
@@ -19,7 +21,7 @@
 
 body {
   text-align: center;
-  background: linear-gradient(var(--purple-900), var(--purple-600));
+  background: linear-gradient(var(--purple-800), var(--purple-600));
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -48,7 +50,7 @@ p {
 }
 
 main {
-  background: linear-gradient(to top, var(--purple-900), var(--purple-600));
+  background: linear-gradient(to top, var(--purple-800), var(--purple-600));
   border-radius: 0.625rem;
   box-shadow: var(--shadow);
   padding: 1.25rem;
@@ -69,7 +71,7 @@ main form {
 
 main form input {
   height: 3.125rem;
-  background-color: var(--purple-900);
+  background-color: var(--purple-800);
   padding: 0 1.25rem;
   font-size: 1rem;
   border-radius: 0.625rem;
@@ -96,6 +98,7 @@ main form input::placeholder {
   border: 0.25rem solid var(--blue-500);
   border-radius: 0.625rem;
   box-shadow: var(--shadow);
+  transition: .2s box-shadow;
 }
 
 .cards .card span {
@@ -104,13 +107,23 @@ main form input::placeholder {
 }
 
 .cards .card button {
-  background-color: var(--purple-900);
+  background: linear-gradient(to left, var(--purple-900), var(--purple-800), var(--purple-600));
   border: transparent;
   height: 3.125rem;
   border-radius: 0.625rem;
   font-size: 1.125rem;
   font-weight: 500;
   cursor: pointer;
+  transition: 0.5s background-size;
+  background-size: 100%;
+}
+
+.cards .card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.cards .card button:hover {
+  background-size: 200%;
 }
 
 footer {
@@ -120,11 +133,6 @@ footer {
   align-items: center;
   margin-bottom: 1.25rem;
 }
-
-/* html {
-  x: 93,75%; -> 15px
-  x: 87,5% -> 14px
-} */
 
 @media screen and (max-width: 768px) {
   html {
